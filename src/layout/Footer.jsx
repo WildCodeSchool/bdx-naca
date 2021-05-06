@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   foot: {
     height: "60px",
+    width: "100%",
   },
   button: {
     color: "white",
