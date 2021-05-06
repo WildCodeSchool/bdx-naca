@@ -52,7 +52,7 @@ export default function FlatCard2(props) {
         },
       };
 
-      const userProfile = await axios.post(
+      await axios.post(
         `https://toctoc-api.herokuapp.com/users/favorite/${props._id}`,
         {},
         config

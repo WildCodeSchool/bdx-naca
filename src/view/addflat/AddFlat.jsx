@@ -67,7 +67,6 @@ function AddFlat({ match }) {
         .get(` https://toctoc-api.herokuapp.com/flat/${match.params.id} `)
         .then((response) => setForm(response.data));
     }
-    console.log(form);
   }, [match.params.id]);
 
   const handleChange = (e) => {

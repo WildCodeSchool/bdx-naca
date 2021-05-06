@@ -86,7 +86,7 @@ export default function Connexion() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
-  const { connectedUser, setConnectedUser } = useContext(UserContext);
+  const { setConnectedUser } = useContext(UserContext);
 
   const handleClick = async (e) => {
     e.preventDefault();
