@@ -54,7 +54,7 @@ function SearchBar(props) {
     <div className={classes.container}>
       <form className={classes.root} noValidate autoComplete="off">
         <input
-          placeholder="Entrez votre ville, votre quartier, votre département..."
+          placeholder="Entrez votre ville ou votre quartier..."
           className={classes.placeh}
         />
       </form>

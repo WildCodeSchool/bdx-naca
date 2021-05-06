@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    position: "relative",
   },
 }));
 
@@ -19,14 +18,10 @@ function Main(props) {
   const classes = useStyles();
   const { children } = props;
   return (
-    <div>
-      <div className={classes.root}>
-        <Header />
-        {children}
-      </div>
-      <div className={classes.footer}>
-        <Footer />
-      </div>
+    <div className={classes.root}>
+      <Header />
+      {children}
+      <Footer />
     </div>
   );
 }
