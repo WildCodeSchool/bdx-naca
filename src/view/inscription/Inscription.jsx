@@ -94,7 +94,7 @@ export default function Inscription() {
       email: email,
       plainPassword: password,
     };
-    const user = await axios.post(
+    await axios.post(
       "http://toctoc-api.herokuapp.com/users",
       userInscription
     );

@@ -46,7 +46,7 @@ function MesBiens(props) {
           console.log(response.data);
         });
     }
-  }, []);
+  }, [connectedUser]);
 
   return (
     <div>

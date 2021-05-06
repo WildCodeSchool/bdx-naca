@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function UnicFlatCard(props) {
-  const { connectedUser, setConnectedUser } = useContext(UserContext);
+  const { connectedUser } = useContext(UserContext);
 
   const classes = useStyles();
 

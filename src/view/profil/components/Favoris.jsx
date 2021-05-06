@@ -30,7 +30,6 @@ function Favoris(props) {
   const { connectedUser } = useContext(UserContext);
 
   useEffect(() => {
-    console.log(connectedUser);
     if (Object.keys(connectedUser).length > 0) {
       Promise.all(
         connectedUser.favorites.map((item) => {
