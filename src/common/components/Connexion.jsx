@@ -5,7 +5,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import { Link, useHistory } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
 import LockOpenOutlinedIcon from "@material-ui/icons/LockOpenOutlined";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -14,23 +13,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import axios from "axios";
 import UserContext from "../../context/user";
-
-function Copyright() {
-  return (
-    <Typography
-      align="center"
-      variant="body2"
-      to="/"
-      component={Link}
-      color="textSecondary"
-    >
-      {"Copyright © "}
-      TocToc
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -43,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "5px 5px 5px #8CB0BC",
     padding: "40px",
     backgroundColor: "#C6DADA",
+    marginBottom: theme.spacing(16),
   },
   avatar: {
     margin: theme.spacing(1),
@@ -86,7 +69,7 @@ export default function Connexion() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
-  const { connectedUser, setConnectedUser } = useContext(UserContext);
+  const { setConnectedUser } = useContext(UserContext);
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -211,9 +194,6 @@ export default function Connexion() {
           </Grid>
         </form>
       </div>
-      <Box mt={4}>
-        <Copyright />
-      </Box>
     </Container>
   );
 }

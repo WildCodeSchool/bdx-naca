@@ -5,7 +5,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import LockOpenOutlinedIcon from "@material-ui/icons/LockOpenOutlined";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -15,25 +14,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import axios from "axios";
 
-function Copyright() {
-  return (
-    <Typography
-      to="/"
-      component={Link}
-      variant="body2"
-      color="textSecondary"
-      align="center"
-    >
-      {"Copyright © "}
-      TocToc {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -94,10 +78,7 @@ export default function Inscription() {
       email: email,
       plainPassword: password,
     };
-    const user = await axios.post(
-      "http://toctoc-api.herokuapp.com/users",
-      userInscription
-    );
+    await axios.post("http://toctoc-api.herokuapp.com/users", userInscription);
   };
 
   return (
@@ -190,7 +171,7 @@ export default function Inscription() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            to="/"
+            to="/connexion"
             component={Link}
             onClick={handleClick}
           >
@@ -211,9 +192,6 @@ export default function Inscription() {
           </Grid>
         </form>
       </div>
-      <Box mt={4}>
-        <Copyright />
-      </Box>
     </Container>
   );
 }

@@ -1,25 +1,25 @@
-import React, { useEffect } from 'react';
-import ImagesUpload from './components/ImagesUpload';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core';
-import axios from 'axios';
-import { useHistory } from 'react-router';
+import React, { useEffect } from "react";
+import ImagesUpload from "./components/ImagesUpload";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core";
+import axios from "axios";
+import { useHistory } from "react-router";
 //import { fileExport } from "@fortawesome/free-solid-svg-icons";
 
 const useStyles = makeStyles((theme) => ({
   submit: {
-    backgroundColor: '#F69B79',
-    margin: '40px',
-    '&:hover': {
-      background: '#F6C179',
+    backgroundColor: "#F69B79",
+    margin: "40px",
+    "&:hover": {
+      background: "#F6C179",
     },
   },
   root: {
-    '& > *': {
+    "& > *": {
       margin: theme.spacing(1),
     },
   },
@@ -28,21 +28,21 @@ const useStyles = makeStyles((theme) => ({
   },
 
   container: {
-    margin: '30px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignContent: 'center',
+    margin: "30px",
+    display: "flex",
+    justifyContent: "center",
+    alignContent: "center",
   },
 
   container2: {
-    boxShadow: '#FADDB6 0px 2px 8px 0px',
-    padding: '50px',
+    boxShadow: "#FADDB6 0px 2px 8px 0px",
+    padding: "50px",
   },
 
   title: {
     fontFamily: "'Montserrat', sans-serif",
-    marginTop: '40px',
-    fontSize: '20px',
+    marginTop: "40px",
+    fontSize: "20px",
   },
 }));
 
@@ -50,15 +50,15 @@ function AddFlat({ match }) {
   const classes = useStyles();
 
   const [form, setForm] = React.useState({
-    type: '',
-    title: '',
-    city: '',
-    district: '',
+    type: "",
+    title: "",
+    city: "",
+    district: "",
     images: [],
     area: 0,
-    furnished: '',
-    price: '',
-    description: '',
+    furnished: "",
+    price: "",
+    description: "",
   });
 
   useEffect(() => {
@@ -67,7 +67,6 @@ function AddFlat({ match }) {
         .get(` https://toctoc-api.herokuapp.com/flat/${match.params.id} `)
         .then((response) => setForm(response.data));
     }
-    console.log(form);
   }, [match.params.id]);
 
   const handleChange = (e) => {
@@ -83,7 +82,7 @@ function AddFlat({ match }) {
   const history = useHistory();
 
   const postForm = () => {
-    const token = localStorage.getItem('userToken');
+    const token = localStorage.getItem("userToken");
     const config = {
       headers: { Authorization: `Bearer ${token}` },
     };
@@ -95,13 +94,14 @@ function AddFlat({ match }) {
           config
         )
         .then(() => {
-          history.push('/');
+          history.push("/");
         });
     } else {
       axios
-        .post('https://toctoc-api.herokuapp.com/flat', form, config)
+        .post("https://toctoc-api.herokuapp.com/flat", form, config)
         .then((res) => {
           console.log(res.data);
+          history.push("/");
         });
     }
   };

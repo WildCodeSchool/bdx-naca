@@ -4,7 +4,8 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   listContainer: {
-    width: 300,
+    width: 250,
+    height: 150,
   },
 }));
 

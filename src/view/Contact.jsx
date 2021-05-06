@@ -4,11 +4,10 @@ import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 import {
   Dialog,
@@ -18,26 +17,10 @@ import {
   DialogTitle,
 } from "@material-ui/core";
 
-function Copyright() {
-  return (
-    <Typography
-      variant="body2"
-      color="textSecondary"
-      align="center"
-      component={Link}
-      to="/"
-    >
-      {"Copyright © "}
-      Toc Toc
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(4),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -221,9 +204,6 @@ export default function SignUp() {
           </Dialog>
         </form>
       </div>
-      <Box mt={5}>
-        <Copyright />
-      </Box>
     </Container>
   );
 }

@@ -44,7 +44,8 @@ const useStyles = makeStyles((theme) => ({
   },
   toctoclogo: {
     width: "130px",
-    height: "130px",
+    height: "115px",
+    marginTop: "-15px",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },

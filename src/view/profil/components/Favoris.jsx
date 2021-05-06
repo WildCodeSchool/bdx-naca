@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     padding: 50,
     marginBottom: "50px",
+    width: "500px",
+    margin: "auto",
   },
   flat: {
     display: "flex",
@@ -30,7 +32,6 @@ function Favoris(props) {
   const { connectedUser } = useContext(UserContext);
 
   useEffect(() => {
-    console.log(connectedUser);
     if (Object.keys(connectedUser).length > 0) {
       Promise.all(
         connectedUser.favorites.map((item) => {
