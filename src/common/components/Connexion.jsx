@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "5px 5px 5px #8CB0BC",
     padding: "40px",
     backgroundColor: "#C6DADA",
-    marginBottom: theme.spacing(16),
+    marginBottom: theme.spacing(28),
   },
   avatar: {
     margin: theme.spacing(1),

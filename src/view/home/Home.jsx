@@ -10,6 +10,8 @@ const useStyles = makeStyles((theme) => ({
   carduser: {
     display: "flex",
     margin: 50,
+    justifyContent: "space-around",
+    marginRight: "100px",
   },
 }));
 

@@ -11,10 +11,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     backgroundColor: "#FFF2D9",
     listStyle: "none",
-    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
   },
   button: {
     color: "white",
+
     backgroundColor: "#F6C179",
     "&:hover": {
       background: "#4E96AF",
@@ -23,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     height: "3em",
     marginTop: "20px",
     fontFamily: "'Comfortaa', cursive",
-    marginLeft: 50,
   },
 }));
 
@@ -31,6 +32,7 @@ function Copyright() {
   useStyles();
   return (
     <Typography
+      paragraph={true}
       align="center"
       variant="body2"
       to="/"
