@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, makeStyles, TextField } from "@material-ui/core";
+import { Button, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -54,7 +54,7 @@ function SearchBar(props) {
     <div className={classes.container}>
       <form className={classes.root} noValidate autoComplete="off">
         <input
-          placeholder="Entrez votre ville, votre quartier, votre département..."
+          placeholder="Entrez votre quartier..."
           className={classes.placeh}
         />
       </form>

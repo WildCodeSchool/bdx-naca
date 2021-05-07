@@ -9,14 +9,9 @@ import Accroche from "./components/Accroche";
 const useStyles = makeStyles((theme) => ({
   carduser: {
     display: "flex",
-    padding: "100px",
-    marginRight: "200px",
-    width: "100%",
-  },
-  rent: {
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
+    margin: 50,
+    justifyContent: "space-around",
+    marginRight: "100px",
   },
 }));
 
@@ -32,9 +27,9 @@ function Home(props) {
       </div>
 
       <div className={classes.carduser}>
-        <UserReviewList className={classes.review} />
-        <AccueilLoc className={classes.rent} />
-        <AccueilProp className={classes.lessor} />
+        <UserReviewList />
+        <AccueilLoc />
+        <AccueilProp />
       </div>
     </>
   );

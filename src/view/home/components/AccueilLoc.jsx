@@ -9,16 +9,20 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 350,
+    width: 350,
     minWidth: 300,
     height: 450,
     backgroundColor: "#C6DADA",
     marginLeft: "150px",
-    borderRadius: "20%",
-    marginTop: "10px",
+    borderRadius: "13%",
+    marginTop: "30px",
     margin: "100px",
+    [theme.breakpoints.down("sm")]: {
+      felxDirection: "column",
+      alignItems: "flex-start",
+    },
   },
   media: {
     height: 250,
@@ -46,7 +50,7 @@ const useStyles = makeStyles({
   cardspeak: {
     fontFamily: "'Montserrat', sans-serif",
   },
-});
+}));
 
 export default function MediaCard() {
   const classes = useStyles();

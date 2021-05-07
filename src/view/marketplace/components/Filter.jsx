@@ -9,7 +9,7 @@ import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: "50px",
+    margin: "30px",
     display: "flex",
   },
   filter: {

@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     padding: 50,
     marginBottom: "50px",
+    width: "300px",
+    margin: "auto",
   },
   flat: {
     display: "flex",
@@ -46,7 +48,7 @@ function MesBiens(props) {
           console.log(response.data);
         });
     }
-  }, []);
+  }, [connectedUser]);
 
   return (
     <div>
