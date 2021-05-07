@@ -16,7 +16,8 @@ import UserContext from "../../context/user";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 280,
-    heigth: 250,
+    marginBottom: "20px",
+    height: "400px",
     borderRadius: "40px",
     boxShadow: "2px 4px 4px #FADDB6",
     marginTop: theme.spacing(3),
